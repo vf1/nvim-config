@@ -70,6 +70,7 @@ return {
   polish = function()
     local map = vim.api.nvim_set_keymap
     -- Set key bindings
+    map("n", "<leader>bn", ":noa w<CR>", { noremap = true, silent = true,  desc = "Write w/o format" })
     map("n", "<leader>gg", ":silent! Flog<CR>", { noremap = true, silent = true,  desc = "A-la Git Graph (vim-flog)" })
   end,
 
