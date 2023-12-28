@@ -57,7 +57,7 @@ return {
         opts.incremental_selection = {
           enable = true,
           keymaps = {
-            init_selection = '<CR>',
+            init_selection = '<TAB>',
             scope_incremental = '<CR>',
             node_incremental = '<TAB>',
             node_decremental = '<S-TAB>',
@@ -72,6 +72,9 @@ return {
     -- Set key bindings
     map("n", "<leader>bn", ":noa w<CR>", { noremap = true, silent = true,  desc = "Write w/o format" })
     map("n", "<leader>gg", ":silent! Flog<CR>", { noremap = true, silent = true,  desc = "A-la Git Graph (vim-flog)" })
+    map("n", "<CR>", "o<ESC>", { noremap = true, silent = true,  desc = "Add line" })
+    -- map("n", "<C-CR>", "O<ESC>", { noremap = true, silent = true,  desc = "Add line above" })
+    -- not work in terminal
   end,
 
    -- Set colorscheme to use
