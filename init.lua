@@ -72,6 +72,7 @@ return {
     -- Set key bindings
     map("n", "<leader>bn", ":noa w<CR>", { noremap = true, silent = true,  desc = "Write w/o format" })
     map("n", "<leader>gg", ":silent! Flog<CR>", { noremap = true, silent = true,  desc = "A-la Git Graph (vim-flog)" })
+    map("n", "<leader>lz", ":LspRestart<CR>", { noremap = true, silent = true,  desc = "Restart LSP" })
     map("n", "<CR>", "o<ESC>", { noremap = true, silent = true,  desc = "Add line" })
     -- map("n", "<C-CR>", "O<ESC>", { noremap = true, silent = true,  desc = "Add line above" })
     -- not work in terminal
