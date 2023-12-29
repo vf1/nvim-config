@@ -76,6 +76,14 @@ return {
     map("n", "<CR>", "o<ESC>", { noremap = true, silent = true,  desc = "Add line" })
     -- map("n", "<C-CR>", "O<ESC>", { noremap = true, silent = true,  desc = "Add line above" })
     -- not work in terminal
+    if vim.g.neovide == true then
+      vim.g.neovide_cursor_animation_length = 0.05
+      vim.g.neovide_cursor_trail_size = 0.2
+      vim.o.guifont = "Droid Sans Mono:h11"
+      vim.api.nvim_set_keymap("n", "<C-+>", ":lua vim.g.neovide_scale_factor = vim.g.neovide_scale_factor + 0.1<CR>", { silent = true })
+      vim.api.nvim_set_keymap("n", "<C-->", ":lua vim.g.neovide_scale_factor = vim.g.neovide_scale_factor - 0.1<CR>", { silent = true })
+      vim.api.nvim_set_keymap("n", "<C-0>", ":lua vim.g.neovide_scale_factor = 1<CR>", { silent = true })
+    end
   end,
 
    -- Set colorscheme to use
