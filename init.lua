@@ -64,7 +64,11 @@ return {
           }
         }
       end,
-    }
+    },
+    {
+      "matze/vim-move",
+      lazy = false,
+    },
   }, 
 
   polish = function()
