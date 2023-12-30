@@ -87,9 +87,12 @@ return {
       vim.api.nvim_set_keymap("n", "<C-->", ":lua vim.g.neovide_scale_factor = vim.g.neovide_scale_factor - 0.1<CR>", { silent = true })
       vim.api.nvim_set_keymap("n", "<C-0>", ":lua vim.g.neovide_scale_factor = 1<CR>", { silent = true })
     end
+    -- colors
+    vim.api.nvim_set_hl(0, "DiffDelete", { fg = "#564656", bg = "#443244" })
   end,
 
    -- Set colorscheme to use
   colorscheme = "catppuccin-mocha",
 }
+
 
