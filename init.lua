@@ -74,8 +74,7 @@ return {
     map("n", "<leader>gg", ":silent! Flog<CR>", { noremap = true, silent = true,  desc = "A-la Git Graph (vim-flog)" })
     map("n", "<leader>lz", ":LspRestart<CR>", { noremap = true, silent = true,  desc = "Restart LSP" })
     map("n", "<CR>", "o<ESC>", { noremap = true, silent = true,  desc = "Add line" })
-    -- map("n", "<C-CR>", "O<ESC>", { noremap = true, silent = true,  desc = "Add line above" })
-    -- not work in terminal
+    -- map("n", "<C-CR>", "O<ESC>", { noremap = true, silent = true,  desc = "Add line above" }) -- not work in terminal
     if vim.g.neovide == true then
       vim.g.neovide_cursor_animation_length = 0.05
       vim.g.neovide_cursor_trail_size = 0.2
