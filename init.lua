@@ -69,13 +69,25 @@ return {
       "matze/vim-move",
       lazy = false,
     },
+    {
+      cmd = { 
+        "DiffviewOpen",
+        "DiffviewFileHistory",
+      },
+      "sindrets/diffview.nvim",
+    },
   }, 
 
   polish = function()
     local map = vim.api.nvim_set_keymap
     -- Set key bindings
     map("n", "<leader>bn", ":noa w<CR>", { noremap = true, silent = true,  desc = "Write w/o format" })
-    map("n", "<leader>gg", ":silent! Flog<CR>", { noremap = true, silent = true,  desc = "A-la Git Graph (vim-flog)" })
+    map("n", "<leader>ggl", ":silent! Flog<CR>", { noremap = true, silent = true,  desc = "Simple git log (vim-flog)" })
+    map("n", "<leader>ggb", ":DiffviewFileHistory<CR>", { noremap = true, silent = true,  desc = "Branch History" })
+    map("n", "<leader>ggf", ":DiffviewFileHistory %<CR>", { noremap = true, silent = true,  desc = "File History" })
+    map("n", "<leader>ggd", ":DiffviewOpen<CR>", { noremap = true, silent = true,  desc = "Open diff view" })
+    map("n", "<leader>tc", ":tabclose<CR>", { noremap = true, silent = true,  desc = "tab close" })
+    map("n", "<leader>to", ":tabnew<CR>", { noremap = true, silent = true,  desc = "tab new (open)" })
     map("n", "<leader>lz", ":LspRestart<CR>", { noremap = true, silent = true,  desc = "Restart LSP" })
     map("n", "<CR>", "o<ESC>", { noremap = true, silent = true,  desc = "Add line" })
     -- map("n", "<C-CR>", "O<ESC>", { noremap = true, silent = true,  desc = "Add line above" }) -- not work in terminal
