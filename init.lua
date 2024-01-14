@@ -76,7 +76,27 @@ return {
       },
       "sindrets/diffview.nvim",
     },
+    { 
+      "David-Kunz/gen.nvim",
+      cmd = { "Gen" },
+      opts = {
+        model = "codellama:34b-instruct-q5_K_M",
+        init = function(options) end, -- do NOT ollama auto start
+        show_model = true,
+      }
+    },
   }, 
+
+  mappings = {
+    n = {
+      ["<leader>ag"] = { ":Gen<CR>", desc = "Gen" },
+      ["<leader>a"] = { name = "AI" },
+    },
+    v = {
+      ["<leader>ag"] = { ":Gen<CR>", desc = "Gen" },
+      ["<leader>a"] = { name = "AI" },
+    },
+  },
 
   polish = function()
     local map = vim.api.nvim_set_keymap
