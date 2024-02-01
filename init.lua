@@ -85,6 +85,10 @@ return {
         show_model = true,
       }
     },
+    {
+      "kevinhwang91/nvim-bqf",
+      ft = "qf",
+    },
   }, 
 
   mappings = {
