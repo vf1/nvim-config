@@ -89,11 +89,25 @@ return {
       "kevinhwang91/nvim-bqf",
       ft = "qf",
     },
+    {
+      -- https://github.com/Wansmer/treesj
+      'Wansmer/treesj',
+      -- keys = { '<space>aj', '<space>as' },
+      cmd = { "TSJJoin", "TSJSplit" },
+      dependencies = { 'nvim-treesitter/nvim-treesitter' },
+      config = function()
+        require('treesj').setup({
+          use_default_keymaps = false,
+        })
+      end,
+    }
   }, 
 
   mappings = {
     n = {
       ["<leader>ag"] = { ":Gen<CR>", desc = "Gen" },
+      ["<leader>aj"] = { ":TSJJoin<CR>", desc = "Join" },
+      ["<leader>as"] = { ":TSJSplit<CR>", desc = "Split" },
       ["<leader>a"] = { name = "AI" },
     },
     v = {
