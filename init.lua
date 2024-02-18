@@ -76,6 +76,13 @@ return {
       },
       "sindrets/diffview.nvim",
     },
+    {
+      "folke/todo-comments.nvim",
+      dependencies = { "nvim-lua/plenary.nvim" },
+      cmd = { "TodoTelescope", "TodoQuickFix" },
+      event = "VimEnter",
+      opts = { },
+    },
     { 
       "David-Kunz/gen.nvim",
       cmd = { "Gen" },
