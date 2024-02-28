@@ -107,7 +107,14 @@ return {
           use_default_keymaps = false,
         })
       end,
-    }
+    },
+    {
+      "nvim-neo-tree/neo-tree.nvim",
+      opts = function(_, opts)
+        opts.window.width = 38 
+        return opts
+      end,
+    },
   }, 
 
   mappings = {
