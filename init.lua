@@ -115,6 +115,9 @@ return {
         return opts
       end,
     },
+    {
+      "olacin/telescope-gitmoji.nvim",
+    },
   }, 
 
   mappings = {
@@ -123,6 +126,8 @@ return {
       ["<leader>aj"] = { ":TSJJoin<CR>", desc = "Join" },
       ["<leader>as"] = { ":TSJSplit<CR>", desc = "Split" },
       ["<leader>a"] = { name = "AI" },
+      ["<leader>gg"] = { name = "Custom GIT commands" },
+      ["<leader>gge"] = { ":Telescope gitmoji<CR>", desc = "Commit with Gitmoji" },
     },
     v = {
       ["<leader>ag"] = { ":Gen<CR>", desc = "Gen" },
