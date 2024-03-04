@@ -128,6 +128,8 @@ return {
       ["<leader>a"] = { name = "AI" },
       ["<leader>gg"] = { name = "Custom GIT commands" },
       ["<leader>gge"] = { ":Telescope gitmoji<CR>", desc = "Commit with Gitmoji" },
+      ["]q"] = { ":cnext<CR>", desc = "Quickfix Next" },
+      ["[q"] = { ":cprev<CR>", desc = "Quickfix Prev" },
     },
     v = {
       ["<leader>ag"] = { ":Gen<CR>", desc = "Gen" },
