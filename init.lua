@@ -128,6 +128,7 @@ return {
       ["<leader>a"] = { name = "AI" },
       ["<leader>gg"] = { name = "Custom GIT commands" },
       ["<leader>gge"] = { ":Telescope gitmoji<CR>", desc = "Commit with Gitmoji" },
+      ["<leader>ggl"] = { ":silent! Flog -all<CR>", desc = "Log (vim-flog)" },
       ["]q"] = { ":cnext<CR>", desc = "Quickfix Next" },
       ["[q"] = { ":cprev<CR>", desc = "Quickfix Prev" },
     },
@@ -141,7 +142,6 @@ return {
     local map = vim.api.nvim_set_keymap
     -- Set key bindings
     map("n", "<leader>bn", ":noa w<CR>", { noremap = true, silent = true,  desc = "Write w/o format" })
-    map("n", "<leader>ggl", ":silent! Flog<CR>", { noremap = true, silent = true,  desc = "Simple git log (vim-flog)" })
     map("n", "<leader>ggb", ":DiffviewFileHistory<CR>", { noremap = true, silent = true,  desc = "Branch History" })
     map("n", "<leader>ggf", ":DiffviewFileHistory %<CR>", { noremap = true, silent = true,  desc = "File History" })
     map("n", "<leader>ggd", ":DiffviewOpen<CR>", { noremap = true, silent = true,  desc = "Open diff view" })
