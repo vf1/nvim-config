@@ -27,7 +27,7 @@ return {
         },
         v = {
           ["<leader>ag"] = { ":Gen<CR>", desc = "Gen" },
-          ["<leader>af"] = { ":BrowserSearch<CR>", desc = "Find in web" },
+          ["<leader>fi"] = { ":BrowserSearch<CR>", desc = "Find in Internet" },
           ["<leader>a"] = { name = "AI" },
         },
       },
