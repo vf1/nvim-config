@@ -12,5 +12,13 @@ return {
         node_decremental = '<S-TAB>',
       }
     }
+    opts.ensure_installed = require("astrocore").list_insert_unique(opts.ensure_installed, {
+      "lua",
+      "vim",
+      "typescript",
+      "tsx",
+      "go",
+      -- add more arguments for adding more treesitter parsers
+    })
   end,
 }
