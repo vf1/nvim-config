@@ -1,3 +1,17 @@
+
+local events = require("neo-tree.events")
+
+events.subscribe({
+  event = events.VIM_BUFFER_ENTER,
+  handler = function()
+    if vim.bo.filetype == "neo-tree" then
+      vim.cmd([[
+        setlocal relativenumber
+      ]])
+    end
+  end,
+})
+
 if true then return end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
 
 if vim.g.neovide == true then
