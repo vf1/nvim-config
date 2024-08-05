@@ -30,6 +30,7 @@ return {
           ["<leader>fi"] = { ":BrowserSearch<CR>", desc = "Find in Internet" },
           ["<leader>a"] = { name = "AI" },
           ["<leader>ss"] = { ":Silicon /tmp/screenshots/{time:%Y-%m-%d-%H%M%S}.png --to-clipboard=true<CR><CR>", desc = "Screenshot" },
+          ["<leader>p"] = { "\"_dP", desc = "Paste and NOT replace register by deleted" },
         },
       },
     },
