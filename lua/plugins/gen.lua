@@ -10,6 +10,7 @@ return {
       model = "llama3.1:8b-instruct-q8_0",
       init = function(options) end, -- do NOT ollama auto start
       show_model = true,
+      display_mode = "horizontal-split",
     }
   },
 }
