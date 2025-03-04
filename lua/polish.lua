@@ -1,16 +1,15 @@
 
-local events = require("neo-tree.events")
-
-events.subscribe({
-  event = events.VIM_BUFFER_ENTER,
-  handler = function()
-    if vim.bo.filetype == "neo-tree" then
-      vim.cmd([[
-        setlocal relativenumber
-      ]])
-    end
-  end,
-})
+-- local events = require("neo-tree.events")
+-- events.subscribe({
+--   event = events.VIM_BUFFER_ENTER,
+--   handler = function()
+--     if vim.bo.filetype == "neo-tree" then
+--       vim.cmd([[
+--         setlocal relativenumber
+--       ]])
+--     end
+--   end,
+-- })
 
 
 if vim.g.neovide == true then
